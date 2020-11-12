@@ -20,21 +20,18 @@ class App extends Component {
   };
 
   setClick = id => {
-    // Finds friends with specific id in this.state.friends
+    // Finds friends with specific id
     const selectFriends = this.state.friends.find(friends => friends.id === id);
     // Set this.state.clicked set includes the selected friend image, end game since it has been selected before
     if (this.state.clicked.has(selectFriends)) {
-      // End game and set this.state to include a new set that is empty to start a new game
-      // Set message to display you guessed incorrect
+      // End game and start a new game
       this.setState(state => ({
         ...state,
         clicked: new Set(),
         message: "Sorry, you guessed incorrect!"
       }))
     } else {
-      // If this.state.clicked doesn't include the slected friend image, add the friend image to the clicked set 
-      // Update high score to reflect either the number of correct friends selected or the existing high score, whichever is larger
-      // Set mesage to display you guessed correct
+      // Update score to show the number of correct friends selected or the best score
       this.setState(state => ({
         ...state,
         friends: this.shuffleFriends(state.friends),
@@ -44,7 +41,7 @@ class App extends Component {
       }))
     }
   };
-  
+
   shuffleFriends = (friends) => {
     for (let i = friends.length - 1; i > 0; i--) {
       let j = Math.floor(Math.random() * (i + 1));
