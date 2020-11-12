@@ -4,10 +4,15 @@ import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import friends from "./friends.json";
 
+let score = 0;
+let bestScore = 0;
+
 class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
-    friends: friends
+    friends: friends,
+    score,
+    bestScore,
   };
 
   removeFriend = id => {
