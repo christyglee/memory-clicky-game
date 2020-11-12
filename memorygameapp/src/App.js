@@ -16,7 +16,7 @@ class App extends Component {
     friends: friends,
     score: 0,
     bestScore: 0,
-    message: "Click a character to test your memory! Try not to click an image twice!",
+    message: "Click a character to test your memory!",
     clicked: new Set()
 
   };
@@ -27,8 +27,8 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Navbar></Navbar>
-        <Title>Friends List</Title>
+        <Navbar title="Memory Clicky Game" message={this.state.message} score={this.state.clicked.size} bestScore={this.state.bestScore}></Navbar>
+        {/* <Title>Friends List</Title> */}
         <Jumbotron>Jumbotron</Jumbotron>
         {this.state.friends.map(friend => (
           <FriendCard
