@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
-import Title from "./components/Title";
 import friends from "./friends.json";
 import Jumbotron from "./components/Jumbotron";
 import Navbar from "./components/Navbar";
-import Container from "./components/Container";
 
-let score = 0;
-let bestScore = 0;
+// let score = 0;
+// let bestScore = 0;
 
 
 class App extends Component {
@@ -19,9 +17,33 @@ class App extends Component {
     bestScore: 0,
     message: "Click a character to test your memory!",
     clicked: new Set()
-
   };
 
+  setClick = id => {
+    // Finds friends with specific id in this.state.friends
+    const selectFriends = this.state.friends.find(friends => friends.id === id);
+    // Set this.state.clicked set includes the selected friend image, end game since it has been selected before
+    if (this.state.clicked.has(selectFriends)) {
+      // End game and set this.state to include a new set that is empty to start a new game
+      // Set message to display you guessed incorrect
+      this.setState(state => ({
+        ...state,
+        clicked: new Set(),
+        message: "Sorry, you guessed incorrect!"
+      }))
+    } else {
+      // If this.state.clicked doesn't include the slected friend image, add the friend image to the clicked set 
+      // Update high score to reflect either the number of correct friends selected or the existing high score, whichever is larger
+      // Set mesage to display you guessed correct
+      this.setState(state => ({
+        ...state,
+        friends: this.shuffleFriends(state.friends),
+        clicked: state.clicked.add(selectFriends),
+        bestScore: Math.max(state.clicked.size, state.bestScore),
+        message: "You're still in the game!"
+      }))
+    }
+  };
 
 
   // Map over this.state.friends and render a FriendCard component for each friend object
@@ -31,12 +53,12 @@ class App extends Component {
         <Navbar title="Memory Clicky Game" message={this.state.message} score={this.state.clicked.size} bestScore={this.state.bestScore}></Navbar>
 
         <Jumbotron>Jumbotron</Jumbotron>
-        {/* <Container> */}
+
         <div className="container">
           <div className="row">
             {this.state.friends.map(friends => (
               <FriendCard
-                onClick={() => this.validateClick(friends.id)}
+                onClick={() => this.setClick(friends.id)}
                 id={friends.id}
                 key={friends.id}
                 name={friends.name}
@@ -46,7 +68,7 @@ class App extends Component {
             ))}
           </div>
         </div>
-        {/* </Container> */}
+
       </Wrapper>
     );
   }
