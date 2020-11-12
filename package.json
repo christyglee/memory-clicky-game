@@ -1,6 +1,6 @@
 {
   "homepage": "https://christyglee.github.io/memory-clicky-game/",
-  "name": "memorygameapp",
+  "name": "memory-clicky-game",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
