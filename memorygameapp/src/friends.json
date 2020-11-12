@@ -2,74 +2,62 @@
   {
     "id": 1,
     "image": "./assets/SpongeBob.png",
-    "name": "SpongeBob",
-    "clicked": false
+    "name": "SpongeBob"
 
   },
   {
     "id": 2,
     "image": "./assets/Gary.png",
-    "name": "Gary",
-    "clicked": false
+    "name": "Gary"
   },
   {
     "id": 3,
     "image": "./assets/Patrick.png",
-    "name": "Patrick",
-    "clicked": false
+    "name": "Patrick"
   },
   {
     "id": 4,
     "image": "./assets/Sandy_Cheeks.png",
-    "name": "Sandy Cheeks",
-    "clicked": false
+    "name": "Sandy Cheeks"
   },
   {
     "id": 5,
     "image": "./assets/Mr._Krabs.png",
-    "name": "Mr. Krabs",
-    "clicked": false
+    "name": "Mr. Krabs"
   },
   {
     "id": 6,
     "image": "./assets/Mrs._Puff.png",
-    "name": "Mrs. Puff",
-    "clicked": false
+    "name": "Mrs. Puff"
   },
   {
     "id": 7,
     "image": "./assets/Pearl_Krabs.png",
-    "name": "Pearl Krabs",
-    "clicked": false
+    "name": "Pearl Krabs"
   },
   {
     "id": 8,
     "image": "./assets/Plankton.png",
-    "name": "Plankton",
-    "clicked": false
+    "name": "Plankton"
   },
   {
     "id": 9,
     "image": "./assets/Pineapple.png",
-    "name": "SpongeBob",
-    "clicked": false
+    "name": "SpongeBob"
   },
   {
     "id": 10,
     "image": "./assets/Larry_Lobster.png",
-    "name": "Larry the Lobster",
-    "clicked": false
+    "name": "Larry the Lobster"
   },
   {
     "id": 11,
     "image": "./assets/Squidward.png",
-    "name": "Squidward",
-    "clicked": false
+    "name": "Squidward"
   },
   {
     "id": 12,
     "image": "./assets/Squilliam.png",
-    "name": "Squilliam",
-    "clicked": false
+    "name": "Squilliam"
   }
 ]
