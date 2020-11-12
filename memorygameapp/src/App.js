@@ -5,6 +5,7 @@ import Title from "./components/Title";
 import friends from "./friends.json";
 import Jumbotron from "./components/Jumbotron";
 import Navbar from "./components/Navbar";
+import Container from "./components/Container";
 
 let score = 0;
 let bestScore = 0;
@@ -28,17 +29,24 @@ class App extends Component {
     return (
       <Wrapper>
         <Navbar title="Memory Clicky Game" message={this.state.message} score={this.state.clicked.size} bestScore={this.state.bestScore}></Navbar>
-        {/* <Title>Friends List</Title> */}
+
         <Jumbotron>Jumbotron</Jumbotron>
-        {this.state.friends.map(friend => (
-          <FriendCard
-            removeFriend={this.removeFriend}
-            id={friend.id}
-            key={friend.id}
-            name={friend.name}
-            image={friend.image}
-          />
-        ))}
+        {/* <Container> */}
+        <div className="container">
+          <div className="row">
+            {this.state.friends.map(friends => (
+              <FriendCard
+                onClick={() => this.validateClick(friends.id)}
+                id={friends.id}
+                key={friends.id}
+                name={friends.name}
+                image={friends.image}
+              />
+
+            ))}
+          </div>
+        </div>
+        {/* </Container> */}
       </Wrapper>
     );
   }
