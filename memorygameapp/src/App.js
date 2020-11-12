@@ -4,10 +4,10 @@ import Wrapper from "./components/Wrapper";
 import friends from "./friends.json";
 import Jumbotron from "./components/Jumbotron";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 // let score = 0;
 // let bestScore = 0;
-
 
 class App extends Component {
   // Setting this.state.friends to the friends json array
@@ -75,7 +75,7 @@ class App extends Component {
             ))}
           </div>
         </div>
-
+        <Footer text="SpongeBob SquarePants Memory Click Game"></Footer>
       </Wrapper>
     );
   }
