@@ -44,6 +44,16 @@ class App extends Component {
       }))
     }
   };
+  
+  shuffleFriends = (friends) => {
+    for (let i = friends.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      let temp = friends[i];
+      friends[i] = friends[j];
+      friends[j] = temp;
+    }
+    return friends
+  }
 
 
   // Map over this.state.friends and render a FriendCard component for each friend object
