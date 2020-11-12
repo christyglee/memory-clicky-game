@@ -1,13 +1,11 @@
 import React from "react";
 import "./style.css";
 
-function FriendCard(props) {
+function FriendCard({ name, image, ...props }) {
+  console.log(props)
   return (
-    <div className="card">
-      <div className="img-container">
-        <img alt={props.name} src={props.image} />
-      </div>
-    </div>
+      // rendering each picture
+      <img src={image} alt={name} {...props} className="img-thumbnail"></img>
   );
 }
 
