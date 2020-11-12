@@ -2,62 +2,74 @@
   {
     "id": 1,
     "image": "./assets/SpongeBob.png",
+    "name": "SpongeBob",
     "clicked": false
 
   },
   {
     "id": 2,
     "image": "./assets/Gary.png",
+    "name": "Gary",
     "clicked": false
   },
   {
     "id": 3,
     "image": "./assets/Patrick.png",
+    "name": "Patrick",
     "clicked": false
   },
   {
     "id": 4,
     "image": "./assets/Sandy_Cheeks.png",
+    "name": "Sandy Cheeks",
     "clicked": false
   },
   {
     "id": 5,
     "image": "./assets/Mr._Krabs.png",
+    "name": "Mr. Krabs",
     "clicked": false
   },
   {
     "id": 6,
     "image": "./assets/Mrs._Puff.png",
+    "name": "Mrs. Puff",
     "clicked": false
   },
   {
     "id": 7,
     "image": "./assets/Pearl_Krabs.png",
+    "name": "Pearl Krabs",
     "clicked": false
   },
   {
     "id": 8,
     "image": "./assets/Plankton.png",
+    "name": "Plankton",
     "clicked": false
   },
   {
     "id": 9,
     "image": "./assets/Pineapple.png",
+    "name": "SpongeBob",
     "clicked": false
   },
   {
     "id": 10,
     "image": "./assets/Larry_Lobster.png",
+    "name": "Larry the Lobster",
     "clicked": false
   },
   {
     "id": 11,
     "image": "./assets/Squidward.png",
+    "name": "Squidward",
     "clicked": false
   },
   {
     "id": 12,
     "image": "./assets/Squilliam.png",
+    "name": "Squilliam",
     "clicked": false
   }
 ]
