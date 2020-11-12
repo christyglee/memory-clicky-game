@@ -7,7 +7,7 @@ function Navbar(props) {
             <div className="container">
                 <a href="/"><span className="navbar-brand mb-0 h1">{props.title}</span></a>
                 <span className="navbar-brand mb-0 h1">{props.message}</span>
-                <span className="navbar-brand mb-0 h1">Score: {props.score} Best Score: {props.bestScore}</span>
+                <span className="navbar-brand mb-0 h1">Score: {props.score} | Best Score: {props.bestScore}</span>
 
   </div>
 </nav >
